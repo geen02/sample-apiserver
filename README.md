@@ -206,8 +206,11 @@ only this superuser group is authorized.
 
 
    ``` shell
+   go mod init github.com/geen02/sample-apiserver
+   go mod tidy
    go mod vendor
+   
    ./hack/update-codegen.sh
-   go build -a -o artifacts/simple-image/kube-sample-apiserver 
+   go build -a -o artifacts/simple-image/kube-sample-apiserver
    
    ```
