@@ -164,9 +164,9 @@ only this superuser group is authorized.
 4. With these keys and certs in-place, we start the server:
 
    ``` shell
-   etcd &
-   sample-apiserver --secure-port 8443 --etcd-servers http://127.0.0.1:2379 --v=7 \
-      --client-ca-file ca.crt \
+   etcd
+   artifacts/simple-image/kube-sample-apiserver --secure-port 8443 --etcd-servers http://127.0.0.1:2379 --v=7 \
+      --client-ca-file ./pki/ca.crt \
       --kubeconfig ~/.kube/config \
       --authentication-kubeconfig ~/.kube/config \
       --authorization-kubeconfig ~/.kube/config
@@ -202,4 +202,12 @@ only this superuser group is authorized.
    ``` shell
    http --verify=no --cert client.crt --cert-key client.key \
       https://localhost:8443/apis/wardle.example.com/v1alpha1/namespaces/default/flunders
+   ```
+
+
+   ``` shell
+   go mod vendor
+   ./hack/update-codegen.sh
+   go build -a -o artifacts/simple-image/kube-sample-apiserver 
+   
    ```

@@ -25,10 +25,10 @@ import (
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/sample-apiserver/pkg/admission/wardleinitializer"
-	"k8s.io/sample-apiserver/pkg/apis/wardle"
-	informers "k8s.io/sample-apiserver/pkg/generated/informers/externalversions"
-	listers "k8s.io/sample-apiserver/pkg/generated/listers/wardle/v1alpha1"
+	"github.com/geen02/sample-apiserver/pkg/admission/wardleinitializer"
+	"github.com/geen02/sample-apiserver/pkg/apis/wardle"
+	informers "github.com/geen02/sample-apiserver/pkg/generated/informers/externalversions"
+	listers "github.com/geen02/sample-apiserver/pkg/generated/listers/wardle/v1alpha1"
 )
 
 // Register registers a plugin

@@ -1,6 +1,6 @@
 // This is a generated file. Do not edit directly.
 
-module k8s.io/sample-apiserver
+module github.com/geen02/sample-apiserver
 
 go 1.15
 
@@ -8,13 +8,14 @@ require (
 	github.com/go-openapi/spec v0.19.3
 	github.com/google/gofuzz v1.1.0
 	github.com/spf13/cobra v1.1.1
-	k8s.io/apimachinery v0.0.0-20210301175527-603e04655e9f
-	k8s.io/apiserver v0.0.0-20210301212943-56458296d4fd
-	k8s.io/client-go v0.0.0-20210301212223-fcbadc8b4149
-	k8s.io/code-generator v0.0.0-20210301175527-3491177bb59d
-	k8s.io/component-base v0.0.0-20210301212626-169ae627a654
+	k8s.io/apimachinery v0.20.4
+	k8s.io/apiserver v0.20.4
+	k8s.io/client-go v0.20.4
+	k8s.io/code-generator v0.20.4
+	k8s.io/component-base v0.20.4
 	k8s.io/klog/v2 v2.5.0
 	k8s.io/kube-openapi v0.0.0-20201113171705-d219536bb9fd
+	github.com/geen02/sample-apiserver v0.20.4
 )
 
 replace (
